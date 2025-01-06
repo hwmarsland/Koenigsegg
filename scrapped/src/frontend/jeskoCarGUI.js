@@ -51,6 +51,35 @@ function transInputs() {
                     style={{padding: '10px', width: '200px'}}
                 />
             </div>
+
+            <div>
+                <button
+                onClick={() => handleLSTup()}
+                style={{margin:'5px', padding: '10px 20px'}}
+                >
+                    LST Shift Up
+                </button>
+                <button
+                onClick={() => handleShiftUp()}
+                style={{margin:'5px', padding: '10px 20px'}}
+                >
+                    Shift Up
+                </button>
+                <button
+                onClick={() => handleShiftDown()}
+                style={{margin:'5px', padding: '10px 20px'}}
+                >
+                    Shift Down
+                </button>
+                <button
+                onClick={() => handleLSTdown()}
+                style={{margin:'5px', padding: '10px 20px'}}
+                >
+                    LST Shift Down
+                </button>
+            </div>
         </div>
     );
 }
+
+export default transInputs;
