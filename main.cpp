@@ -1,5 +1,4 @@
 # include <iostream>
-// #include <drogon/drogon.h>
 
 using namespace std;
 using namespace std::chrono;
@@ -57,14 +56,3 @@ int main(){
 
     return 0;
 }
-
-
-
-// int main() {
-//     drogon::app().addListener("0.0.0.0", 8080);
-//     drogon::app().registerHandler("/api/hello", [](const drogon::HttpRequestPtr &, std::function<void(const drogon::HttpResponsePtr &)> callback) {
-//         auto response = drogon::HttpResponse::newHttpJsonResponse({{"message", "Hello from C++"}});
-//         callback(response);
-//     });
-//     drogon::app().run();
-// }
