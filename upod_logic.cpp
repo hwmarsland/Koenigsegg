@@ -89,16 +89,17 @@ void displayMeters(double &speed, double &rpm, int &computedGear, double &ms) {
 
     cout << "Koenigsegg Jesko\n" << endl;
     cout << "Previous shift to gear " << computedGear << " computed in " << ms << " nanoseconds.\n" << endl;
-    cout << "Speedometer: " << setw(3) << speed << " mph\t\t\t\t\t";
-    cout << "Tachometer: " << setw(3) << rpm << " rev/min" << endl;
-
+    cout << "Speedometer: " << setw(3) << speed << " mph" << endl;
+    
     // Simple ASCII representation
     cout << "[";
     for (int i = 0; i < 50; i++) {
         if (i < speed / 6) cout << "=";
         else cout << " ";
     }
-    cout << "]\t";
+    cout << "]\n";
+
+    cout << "Tachometer: " << setw(4) << rpm << " rev/min" << endl;
 
     cout << "[";
     for (int i = 0; i < 50; i++) {
@@ -136,7 +137,7 @@ int main (){
                 cout << "Enter speed (mph): ";
                 cin >> speedInput;
                 if (speedInput < 0 || speedInput > 310){
-                    cout << "Invalid input!";
+                    cout << "Invalid input!\n\n";
                     this_thread::sleep_for(std::chrono::milliseconds(200));
                     break;
                 } else {
@@ -147,7 +148,7 @@ int main (){
                 cout << "Enter engine RPMs: ";
                 cin >> speedInput;
                 if (speedInput < 0 || speedInput > 8500){
-                    cout << "Invalid input!";
+                    cout << "Invalid input!\n\n";
                     this_thread::sleep_for(std::chrono::milliseconds(200));
                     break;
                 } else {
@@ -158,7 +159,7 @@ int main (){
                 upod(speed, rpm, computedGear, ms);
                 break;
             default:
-                cout << "Invalid input!" << endl;
+                cout << "Invalid input!\n\n" << endl;
                 this_thread::sleep_for(std::chrono::milliseconds(200));
                 break;
         }
