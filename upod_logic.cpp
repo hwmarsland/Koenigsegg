@@ -22,6 +22,17 @@ const GearFunctions gears[] = {
     {0.0367676, 0.0411765} // Gear 9
 };
 
+int getOsName()
+{
+    #ifdef _WIN32
+    return 0;
+    #elif _WIN64
+    return 0;
+    #elif __APPLE__ || __MACH__
+    return 1;
+    #endif
+}
+
 
 int upod(double &speed, double &rpm, int &computedGear, double &ms){
 
@@ -70,8 +81,11 @@ int upod(double &speed, double &rpm, int &computedGear, double &ms){
 
 void displayMeters(double &speed, double &rpm, int &computedGear, double &ms) {
     // Clear the screen
-    system("clear");  // For Linux/macOS
-    // system("cls");  // Uncomment if using Windows
+    if (getOsName() == 1){
+        system("clear");  // For Linux/macOS
+    } else {
+        system("cls");  // For Windows
+    }
 
     cout << "Koenigsegg Jesko\n" << endl;
     cout << "Previous shift to gear " << computedGear << " computed in " << ms << " nanoseconds.\n" << endl;
