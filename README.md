@@ -18,4 +18,4 @@ Having set up the logic (the main bit of the problem) I then created a simple AS
 After tweaking for program efficiency several times, the program now determines the optimal gear and RPM in an average of 492 nanoseconds (sample size of 10 tests) on an Apple M3 Pro chip. I have not seen it go above 1 microsecond on the latest version. 
 > This means that on average, my recreation of the UPOD system computes the optimal gear in 1/4000th of the overall shift time.
 ## How to Use
-I used auto classifiers for the timing functions, so you need to be using C++11 to compile this program. To run the program on your system, download the `upod_logic.cpp` file, head over to your terminal, navigate to the correct directory and run `g++ upod_logic.cpp -o upod.exe` then `./upod.exe`. Finally, enjoy!
+I used auto classifiers for the timing functions, so you need to be using C++11 or a later version to compile this program. To run the program on your system, download the `upod_logic.cpp` file, head over to your terminal, navigate to the correct directory and run `g++ upod_logic.cpp -o upod.exe` then `./upod.exe`. Finally, enjoy!
