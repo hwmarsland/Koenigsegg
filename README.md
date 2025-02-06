@@ -3,7 +3,7 @@ Koenigsegg's custom Light Speed Transmission (LST) is uniquely impressive, allow
 
 ## My Solution
 ### Planning
-When going into this project I knew speed was going to be the most important aspect. Koenigsegg says that the LST "gearbox can jump between any two ratios in just two milliseconds" ([Car and Driver](https://www.caranddriver.com/features/a28927301/koenigsegg-new-transmission-promises-ultraquick-shifts/)), so my recreation of the UPOD technology needed to be a small fraction of that.
+When going into this project I knew speed and consistency were going to be the most important aspects. Koenigsegg says that the LST "gearbox can jump between any two ratios in just two milliseconds" ([Car and Driver](https://www.caranddriver.com/features/a28927301/koenigsegg-new-transmission-promises-ultraquick-shifts/)), so my recreation of the UPOD technology needed to be a small fraction of that.
 After that prioritization, I found the dyno chart and gearing of the Koenigsegg Jesko Absolut, which would be my example car as it contains the LST and UPOD systems ([Source](https://www.motormatchup.com/catalog/Koenigsegg/Jesko/2021/Absolut)). With that information I derived the following relevant items:
 - Power Band: I determined the power band to be from 4500 to 8500 RPM. At 4500 RPM the Jesko produces the maximum amount of torque. As RPMs increase the torque stays high as the horsepower rises until 7800 where maximum horsepower is reached and sustained until redline at 8500 RPM.
 - Optimal Engine Speed: If the power band is 4500 to 8500 RPM, the UPOD system would select a value in that range for the optimal power. I shot for the low end to allow the driver to experience a fuller range of the power band before needing to shift again.
