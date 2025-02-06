@@ -87,7 +87,7 @@ void displayMeters(double &speed, double &rpm, int &computedGear, double &ms) {
         system("cls");  // For Windows
     }
 
-    cout << "Koenigsegg Jesko\n" << endl;
+    cout << "Koenigsegg Jesko Absolut\n" << endl;
     cout << "Previous shift to gear " << computedGear << " computed in " << ms << " nanoseconds.\n" << endl;
     cout << "Speedometer: " << setw(3) << speed << " mph / 310 mph" << endl;
     
