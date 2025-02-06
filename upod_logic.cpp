@@ -143,7 +143,7 @@ int main (){
                 }
                 if (speedInput < 0 || speedInput > 310){
                     cout << "Invalid input!\n\n";
-                    this_thread::sleep_for(std::chrono::milliseconds(200));
+                    this_thread::sleep_for(milliseconds(200));
                     break;
                 } else {
                     speed = speedInput;
@@ -158,7 +158,7 @@ int main (){
                 }
                 if (speedInput < 0 || speedInput > 8500){
                     cout << "Invalid input!\n\n";
-                    this_thread::sleep_for(std::chrono::milliseconds(200));
+                    this_thread::sleep_for(milliseconds(200));
                     break;
                 } else {
                     rpm = speedInput;
@@ -169,7 +169,7 @@ int main (){
                 break;
             default:
                 cout << "Invalid input!\n\n" << endl;
-                this_thread::sleep_for(std::chrono::milliseconds(200));
+                this_thread::sleep_for(milliseconds(200));
                 break;
         }
     }
