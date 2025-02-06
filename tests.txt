@@ -1,0 +1,12 @@
+73 mph -> Gear 5, 5252 RPM, 500 nanoseconds
+89 mph -> Gear 6, 5040 RPM, 750 nanoseconds
+97 mph -> Gear 6, 5494 RPM, 292 nanoseconds
+42 mph -> Gear 3, 5003 RPM, 208 nanoseconds
+192 mph -> Gear 9, 5220 RPM, 792 nanoseconds
+220 mph -> Gear 9, 5982 RPM, 791 nanoseconds
+100 mph -> Gear 6, 5664 RPM, 708 nanoseconds
+59 mph -> Gear 4, 5502 RPM, 125 nanoseconds
+143 mph -> Gear 8, 4922 RPM, 667 nanoseconds
+7 mph -> Gear 1, 1363 RPM, 83 nanoseconds
+
+Avg speed = 492 nanoseconds
