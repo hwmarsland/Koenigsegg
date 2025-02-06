@@ -1,3 +1,24 @@
+/*
+ * Koenigsegg's Ultimate Power On Demand (UPOD) System - C++ Implementation
+ *
+ * This program simulates Koenigsegg's UPOD system, the "brain" behind their custom Light Speed Transmission 
+ * that enables lightning-fast shifts between any gears, not just adjacent ones. It optimally selects the 
+ * gear for maximum acceleration by mapping speed to engine RPMs within the Jesko Absolut's power band (4500 to 8500 RPM).
+ *
+ * Key Features:
+ * - Calculates optimal gear and engine RPM in ~492 nanoseconds on average (Apple M3 Pro chip).
+ * - Uses dyno data and speed-to-RPM functions for each gear to determine optimal performance.
+ * - Implements efficient if-else logic for speed-based gear selection.
+ * - Includes an ASCII command-line interface with error checking for user inputs.
+ *
+ * Requirements:
+ * - C++11 or later for compilation.
+ * - To run: Execute via terminal: 
+ *   `g++ upod_logic.cpp -o upod.exe` and `./upod.exe`
+ *
+ * Author: Harris Marsland
+ */
+
 # include <iostream>
 #include <iomanip>
 #include <thread>
