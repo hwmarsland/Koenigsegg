@@ -89,7 +89,7 @@ void displayMeters(double &speed, double &rpm, int &computedGear, double &ms) {
 
     cout << "Koenigsegg Jesko\n" << endl;
     cout << "Previous shift to gear " << computedGear << " computed in " << ms << " nanoseconds.\n" << endl;
-    cout << "Speedometer: " << setw(3) << speed << " mph" << endl;
+    cout << "Speedometer: " << setw(3) << speed << " mph / 310 mph" << endl;
     
     // Simple ASCII representation
     cout << "[";
@@ -99,7 +99,7 @@ void displayMeters(double &speed, double &rpm, int &computedGear, double &ms) {
     }
     cout << "]\n";
 
-    cout << "Tachometer: " << setw(4) << rpm << " rev/min" << endl;
+    cout << "Tachometer: " << setw(4) << rpm << " rev/min / 8500 rev/min" << endl;
 
     cout << "[";
     for (int i = 0; i < 50; i++) {
@@ -120,6 +120,7 @@ void displayMeters(double &speed, double &rpm, int &computedGear, double &ms) {
 int main (){
     double speed = 0, rpm = 0;
     char menuInput;
+    int temp;
     int speedInput;
     int computedGear = 1;
     double ms = 0;
@@ -135,7 +136,11 @@ int main (){
         switch (menuInput) {
             case 'S': case 's':
                 cout << "Enter speed (mph): ";
-                cin >> speedInput;
+                while (!(cin >> speedInput)) {
+                    cin.clear();  // Clear error flag
+                    cin.ignore(1000, '\n');  // Discard invalid input
+                    cout << "Invalid input. Please enter an integer: ";
+                }
                 if (speedInput < 0 || speedInput > 310){
                     cout << "Invalid input!\n\n";
                     this_thread::sleep_for(std::chrono::milliseconds(200));
@@ -146,7 +151,11 @@ int main (){
                 }
             case 'R': case 'r':
                 cout << "Enter engine RPMs: ";
-                cin >> speedInput;
+                while (!(cin >> speedInput)) {
+                    cin.clear();  // Clear error flag
+                    cin.ignore(1000, '\n');  // Discard invalid input
+                    cout << "Invalid input. Please enter an integer: ";
+                }
                 if (speedInput < 0 || speedInput > 8500){
                     cout << "Invalid input!\n\n";
                     this_thread::sleep_for(std::chrono::milliseconds(200));
